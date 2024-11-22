@@ -10,8 +10,8 @@ export default {
   theme: {
     extend: {
       colors: {
-      "dark": '#232A3C',
-      "medium": '#293245'
+        "dark": '#232A3C',
+        "medium": '#293245'
       }
     },
   },
