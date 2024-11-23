@@ -7,6 +7,7 @@ const Home = () => {
   return (
     <div className='overflow-hidden'>
       <Headline />  
+     
       <Footer />
     </div>
   )
