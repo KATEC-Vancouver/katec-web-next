@@ -16,7 +16,9 @@ const Headline = () => {
               <p className="text-xs sm:text-sm">여러분을 카텍의 맴버로 초대합니다!</p>
             </div>
             {/* Title */}
-            <h1 className="text-2xl sm:text-4xl md:text-5xl mt-6 mb-6 font-bold md:leading-[3rem] lg:leading-[3.5rem]">
+            <h1
+            data-aos="fade-up" 
+            className="text-2xl sm:text-4xl md:text-5xl mt-6 mb-6 font-bold md:leading-[3rem] lg:leading-[3.5rem]">
               The KATEC is The communiy of Korean Developers that has everything you need.
             </h1>
             {/* Description */} 
@@ -28,7 +30,7 @@ const Headline = () => {
             </p>
           </div>
           {/* Right */}
-          <div className="hidden lg:block">
+          <div data-aos="fade-up" data-aos-delay='200' className="hidden lg:block">
             <Image src="/images/image1.png" width={700} height={700} alt="hero" />
           </div>
         </div>

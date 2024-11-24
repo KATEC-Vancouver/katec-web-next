@@ -1,25 +1,26 @@
-'use client'  
-import Image from 'next/image'
+'use client';
+import Image from 'next/image';
 import { motion } from "framer-motion";
 import { Fragment } from 'react';
 
 const logos = [
-  { name : 'logo1', src: '/images/logo1.png'},
-  { name : 'logo2', src: '/images/logo2.png'},
-  { name : 'logo3', src: '/images/logo3.png'},
-  { name : 'logo4', src: '/images/logo4.png'},
-  { name : 'logo5', src: '/images/logo5.png'},
- 
-  
+  { name: 'logo1', src: '/images/logo1.png' },
+  { name: 'logo2', src: '/images/logo2.png' },
+  { name: 'logo3', src: '/images/logo3.png' },
+  { name: 'logo4', src: '/images/logo4.png' },
+  { name: 'logo5', src: '/images/logo5.png' },
 ];
 
 export default function LogoTicker() {
   return (
-    <section className="py-6 overflow-x-clip bg-gray-100">
-      <div className="container">
+    <section className="py-6 overflow-x-clip bg-[#f7f6fb]">
+      <div className="max-w-[90%] xl:max-w-[80%] 2xl:max-w-[70%] mx-auto">
+        {/* Title */}
         <h3 className="text-center text-gray-400 text-xl">
-        Together with our sponsors, shaping a better tech community
+          Together with our sponsors, shaping a better tech community
         </h3>
+
+        {/* Logo Ticker */}
         <div
           className="flex overflow-hidden mt-10"
           style={{
