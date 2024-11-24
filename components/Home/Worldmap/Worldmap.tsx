@@ -49,7 +49,7 @@ const TypingText = ({ text, delay = 0 }: TypingTextProps) => (
 );
 
 const Map = () => (
-  <section className="relative z-10 bg-[#f7f6fb] py-10">
+  <section className="relative z-10 bg-[#f7f6fb] py-10 dark:bg-slate-500">
     <motion.div
       variants={staggerContainer}
       initial="hidden"

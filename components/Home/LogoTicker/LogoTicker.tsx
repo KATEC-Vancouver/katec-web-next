@@ -13,7 +13,7 @@ const logos = [
 
 export default function LogoTicker() {
   return (
-    <section className="py-6 overflow-x-clip bg-[#f7f6fb]">
+    <section className="py-6 overflow-x-clip bg-[#f7f6fb] dark:bg-slate-500">
       <div className="max-w-[90%] xl:max-w-[80%] 2xl:max-w-[70%] mx-auto">
         {/* Title */}
         <h3 className="text-center text-gray-400 text-xl">

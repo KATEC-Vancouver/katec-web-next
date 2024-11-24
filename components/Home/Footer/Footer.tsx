@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 const Footer = () => {
   return (
-    <footer className="w-full bg-white-800 text-black py-4 bg-[#edecf1]">
+    <footer className="w-full bg-white-800 text-black py-4 bg-[#edecf1] dark:bg-slate-600">
       <div className="flex items-center justify-between max-w-[90%] xl:max-w-[80%] 2xl:max-w-[70%] mx-auto">
         {/* Logo */}
         <Link href="/">
