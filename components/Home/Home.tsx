@@ -1,8 +1,6 @@
 'use client';
 import React, { use, useEffect } from 'react'
 import Headline from './Headline/Headline'
-import LogoTicker from './LogoTicker/LogoTicker'
-import Worldmap from './Worldmap/Worldmap'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 
@@ -25,8 +23,6 @@ const Home = () => {
   return (
     <div className='overflow-hidden'>
       <Headline />  
-      <Worldmap />
-      <LogoTicker />
     </div>
   )
 }

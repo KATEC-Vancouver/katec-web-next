@@ -3,13 +3,13 @@ import Image from 'next/image'
 
 const Headline = () => {
   return (
-    <div className='w-full pt-[4vh] md:pt-[12vh] h-screen bg-[#f7f6fb] dark:bg-slate-500'>
+    <div className='w-full pt-[4vh] md:pt-[12vh] h-screen bg-[#f7f6fb]'>
       <div className='flex justify-center flex-col w-[90%] sm:w-[80%] h-full mx-auto'>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Left */}
           <div>
             {/* Social Links and Invitation */}
-            <div className="w-fit py-1.5 px-2 md:px-5 rounded-full shadow-md flex items-center space-x-3 bg-blue-200 dark:bg-lime-400">
+            <div className="w-fit py-1.5 px-2 md:px-5 rounded-full shadow-md flex items-center space-x-3 bg-blue-200">
               {/* LinkedIn */}
               <a
                 href="https://www.linkedin.com/company/katec2024/posts/?feedView=all"
@@ -61,7 +61,7 @@ const Headline = () => {
             {/* Title */}
             <h1
             data-aos="fade-up" 
-            className="text-2xl sm:text-4xl md:text-5xl mt-6 mb-6 font-bold md:leading-[3rem] lg:leading-[3.5rem] dark:text-white">
+            className="text-2xl sm:text-4xl md:text-5xl mt-6 mb-6 font-bold md:leading-[3rem] lg:leading-[3.5rem]">
               The KATEC is The communiy of Korean Developers that has everything you need.
             </h1>
             {/* Description */} 
@@ -72,6 +72,7 @@ const Headline = () => {
               tempore.
             </p>
           </div>
+          
           {/* Right */}
           <div data-aos="fade-up" data-aos-delay='200' className="hidden lg:block">
             <Image src="/images/image1.png" width={700} height={700} alt="hero" />

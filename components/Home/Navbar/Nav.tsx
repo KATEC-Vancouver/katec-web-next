@@ -2,7 +2,6 @@
 
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import ThemeToggle from "./ThemeToggle";
 import { HiBars3 } from "react-icons/hi2";
 
 export const navLinks = [
@@ -20,12 +19,6 @@ type Props = {
 
 const Nav = ({ openNav }: Props) => {
   const [navBg, setNavBg] = useState(false);
-  const [darkMode, setDarkMode] = useState(() => {
-    if (typeof window !== "undefined") {
-      return localStorage.getItem("theme") === "dark";
-    }
-    return false;
-  });
 
   useEffect(() => {
     const handler = () => {
@@ -38,22 +31,11 @@ const Nav = ({ openNav }: Props) => {
     return () => window.removeEventListener("scroll", handler);
   }, []);
 
-  const toggleTheme = () => {
-    setDarkMode((prev) => !prev);
-    if (!darkMode) {
-      document.documentElement.classList.add("dark");
-      localStorage.setItem("theme", "dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-      localStorage.setItem("theme", "light");
-    }
-  };
-
   return (
     <div
       className={`fixed ${
         navBg ? "bg-blue-100 shadow-md" : "fixed"
-      } dark:bg-slate-600 w-full transition-all duration-200 h-[12vh] z-[1000]`}
+      } w-full transition-all duration-200 h-[12vh] z-[1000]`}
     >
       <div className="flex items-center h-full justify-between w-[90%] xl:w-[80%] 2xl:w-[70%] mx-auto">
         {/* Logo */}
@@ -66,17 +48,12 @@ const Nav = ({ openNav }: Props) => {
         </div>
 
         {/* Nav Links */}
-        <div className="hidden lg:flex items-center space-x-10 ml-15 dark:text-white">
+        <div className="hidden lg:flex items-center space-x-10 ml-15 ">
           {navLinks.map((link) => (
             <Link href={link.url} key={link.id}>
               <p className="nav__link">{link.label}</p>
             </Link>
           ))}
-        </div>
-
-        {/* Theme Toggle */}
-        <div onClick={toggleTheme}>
-          <ThemeToggle />
         </div>
 
         {/* Burger Menu */}
