@@ -39,7 +39,6 @@ export default function RootLayout({
         <ResNav />
         {children}
         <Footer />
-        <Footer />
       </body>
     </html>
   );

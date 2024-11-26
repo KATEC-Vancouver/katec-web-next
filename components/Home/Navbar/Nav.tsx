@@ -6,7 +6,7 @@ import ThemeToggle from "./ThemeToggle";
 import { HiBars3 } from "react-icons/hi2";
 
 export const navLinks = [
-  { id: 1, url: "#", label: "Home" },
+  { id: 1, url: "/", label: "Home" },
   { id: 2, url: "/about", label: "About" },
   { id: 3, url: "#", label: "Sponsors" },
   { id: 4, url: "#", label: "Events" },
