@@ -3,13 +3,11 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { HiBars3 } from "react-icons/hi2";
-
 export const navLinks = [
   { id: 1, url: "/", label: "Home" },
   { id: 2, url: "/about", label: "About" },
-  { id: 3, url: "#", label: "Sponsors" },
-  { id: 4, url: "#", label: "Events" },
-  { id: 5, url: "#", label: "Activity" },
+  { id: 4, url: "/events", label: "Events" },
+  { id: 5, url: "/activity", label: "Activity" },
   { id: 6, url: "#", label: "Contact" },
 ];
 
