@@ -1,7 +1,6 @@
 'use client';
 import React, { use, useEffect } from 'react'
 import Headline from './Headline/Headline'
-import Footer from './Footer/Footer'
 import LogoTicker from './LogoTicker/LogoTicker'
 import Worldmap from './Worldmap/Worldmap'
 import Aos from 'aos'
@@ -28,7 +27,6 @@ const Home = () => {
       <Headline />  
       <Worldmap />
       <LogoTicker />
-      <Footer />
     </div>
   )
 }
