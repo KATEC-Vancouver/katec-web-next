@@ -28,7 +28,6 @@ const Home = () => {
       <Headline />  
       <Worldmap />
       <LogoTicker />
-      <Footer />
     </div>
   )
 }
