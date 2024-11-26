@@ -100,7 +100,7 @@ const Activitypage: React.FC = () => {
         </div>
       </div>
 
-      {/* 모달 컴포넌트 */}
+      {/* Modal */}
       <Modal isOpen={isOpen} onClose={closeModal} selectedImage={selectedImage} />
     </div>
   );
