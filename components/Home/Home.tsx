@@ -1,30 +1,30 @@
 'use client';
-import React, { use, useEffect } from 'react'
-import Headline from './Headline/Headline'
-import Aos from 'aos'
-import 'aos/dist/aos.css'
+import React, { useEffect } from 'react';
+import Headline from './Headline/Headline';
+import ActivityHighlights from './ActivityHighlights/ActivityHighlights'; 
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 const Home = () => {
   useEffect(() => {
     const initAos = async () => {
-      await import('aos')
+      await import('aos');
       Aos.init({
         duration: 1000,
-        easing: "ease",
+        easing: 'ease',
         once: true,
-        anchorPlacement: "top-bottom"
+        anchorPlacement: 'top-bottom',
       });
     };
     initAos();
   }, []);
 
-        
-
   return (
-    <div className='overflow-hidden'>
-      <Headline />  
+    <div className="bg-gray-100 overflow-hidden">
+      <Headline />
+      <ActivityHighlights />
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

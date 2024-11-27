@@ -75,7 +75,7 @@ const Headline = () => {
           
           {/* Right */}
           <div data-aos="fade-up" data-aos-delay='200' className="hidden lg:block">
-            <Image src="/images/image1.png" width={700} height={700} alt="hero" />
+            <Image src="/images/image2.jpeg" width={800} height={700} alt="hero" />
           </div>
         </div>
       </div>

@@ -4,30 +4,30 @@ import React from 'react';
 import Image from 'next/image';
 
 interface ModalProps {
-  isOpen: boolean; // 모달 열림 여부
-  onClose: () => void; // 모달 닫기 함수
-  selectedImage: string | null; // 선택된 이미지 URL
+  isOpen: boolean; 
+  onClose: () => void; 
+  selectedImage: string | null; 
 }
 
 const Modal: React.FC<ModalProps> = ({ isOpen, onClose, selectedImage }) => {
-  if (!isOpen) return null; // 모달이 닫혀 있으면 렌더링하지 않음
+  if (!isOpen) return null; 
 
   return (
     <div
-      className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
-      onClick={onClose} // 모달 외부 클릭 시 닫기
+      className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[11000]"
+      onClick={onClose} 
     >
       <div
         className="bg-white rounded-lg p-4 relative"
-        onClick={(e) => e.stopPropagation()} // 내부 클릭 시 닫기 방지
+        onClick={(e) => e.stopPropagation()} 
       >
         {selectedImage && (
           <Image
             src={selectedImage}
             alt="Selected"
-            width={800}
-            height={600}
-            className="rounded-lg"
+            width={500}
+            height={500}
+            className="object-contain rounded-lg"
           />
         )}
       </div>
