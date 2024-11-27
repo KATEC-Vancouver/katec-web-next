@@ -8,7 +8,7 @@ export const navLinks = [
   { id: 2, url: "/about", label: "About" },
   { id: 4, url: "/events", label: "Events" },
   { id: 5, url: "/activity", label: "Activity" },
-  { id: 6, url: "#", label: "Contact" },
+  { id: 6, url: "/contact", label: "Contact" },
 ];
 
 type Props = {
