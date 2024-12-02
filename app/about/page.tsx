@@ -5,12 +5,12 @@ import 'aos/dist/aos.css';
 
 const AboutSection = () => (
   <div id="about-section" className="w-full text-center px-4 lg:px-0 mt-16">
-    <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800 mb-12">in KATEC,</h2>
+    <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800 mb-12">with KATEC,</h2>
     <div className="w-full max-w-5xl mx-auto bg-white shadow-lg rounded-lg p-6" style={{ minWidth: '60vw' }}>
       <div className="grid grid-cols-3 gap-4 md:gap-16 justify-items-center">
         {[
-          { number: '1000만 건', description: '지식 & 라이프 콘텐츠' },
-          { number: '70만 명', description: '월 방문자' },
+          { number: '400+', description: '회원수' },
+          { number: '70만 명', description: '방문수' },
           { number: '700만 건', description: '월 페이지 뷰' },
         ].map((item, index) => (
           <div key={index} className="flex flex-col items-center">
@@ -72,7 +72,7 @@ const HistorySection = () => {
       ></div>
       {/* title */}
       <h2 className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-10 text-3xl font-bold text-gray-800">
-        History
+        HISTORY
       </h2>
       {/* tree nodes */}
       {historyData.map((node, index) => (
