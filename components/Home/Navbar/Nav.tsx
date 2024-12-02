@@ -3,12 +3,13 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { HiBars3 } from "react-icons/hi2";
+
 export const navLinks = [
   { id: 1, url: "/", label: "Home" },
   { id: 2, url: "/about", label: "About" },
-  { id: 4, url: "/events", label: "Events" },
+  { id: 4, url: "/news", label: "News" },
   { id: 5, url: "/activity", label: "Activity" },
-  { id: 6, url: "#", label: "Contact" },
+  { id: 6, url: "/contact", label: "Contact" },
 ];
 
 type Props = {
@@ -38,11 +39,13 @@ const Nav = ({ openNav }: Props) => {
       <div className="flex items-center h-full justify-between w-[90%] xl:w-[80%] 2xl:w-[70%] mx-auto">
         {/* Logo */}
         <div className="flex items-center">
-          <img
-            src="/images/nonBg-logo.png"
-            alt="Logo"
-            className="h-10 md:h-12"
-          />
+          <Link href="/"> 
+            <img
+              src="/images/nonBg-logo.png"
+              alt="Logo"
+              className="h-10 md:h-12 cursor-pointer" 
+            />
+          </Link>
         </div>
 
         {/* Nav Links */}
