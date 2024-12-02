@@ -18,7 +18,7 @@ const Headline = () => {
                 className="flex items-center"
               >
                 <Image
-                  src="/images/linkdeinlogo.png"
+                  src="/images/lnkdlogo.png"
                   alt="LinkedIn"
                   width={32}
                   height={32}
