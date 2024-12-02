@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { HiBars3 } from "react-icons/hi2";
+
 export const navLinks = [
   { id: 1, url: "/", label: "Home" },
   { id: 2, url: "/about", label: "About" },
@@ -38,11 +39,13 @@ const Nav = ({ openNav }: Props) => {
       <div className="flex items-center h-full justify-between w-[90%] xl:w-[80%] 2xl:w-[70%] mx-auto">
         {/* Logo */}
         <div className="flex items-center">
-          <img
-            src="/images/nonBg-logo.png"
-            alt="Logo"
-            className="h-10 md:h-12"
-          />
+          <Link href="/"> {/* Home 링크 추가 */}
+            <img
+              src="/images/nonBg-logo.png"
+              alt="Logo"
+              className="h-10 md:h-12 cursor-pointer" // 클릭 가능하게 추가
+            />
+          </Link>
         </div>
 
         {/* Nav Links */}
