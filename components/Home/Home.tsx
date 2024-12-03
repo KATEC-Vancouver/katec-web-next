@@ -20,7 +20,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="bg-gray-100 overflow-hidden">
+    <div className="bg-[#f7f6fb] overflow-hidden">
       <Headline />
       <ActivityHighlights />
     </div>

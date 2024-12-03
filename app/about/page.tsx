@@ -5,13 +5,13 @@ import 'aos/dist/aos.css';
 
 const AboutSection = () => (
   <div id="about-section" className="w-full text-center px-4 lg:px-0 mt-16">
-    <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800 mb-12">with KATEC,</h2>
+    <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800 mb-12">ABOUT</h2>
     <div className="w-full max-w-5xl mx-auto bg-white shadow-lg rounded-lg p-6" style={{ minWidth: '60vw' }}>
       <div className="grid grid-cols-3 gap-4 md:gap-16 justify-items-center">
         {[
           { number: '400+', description: '회원수' },
-          { number: '70만 명', description: '방문수' },
-          { number: '700만 건', description: '월 페이지 뷰' },
+          { number: '2건', description: '웨비나' },
+          { number: '1 건', description: '액티비티' },
         ].map((item, index) => (
           <div key={index} className="flex flex-col items-center">
             <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-700">{item.number}</h3>
@@ -161,7 +161,7 @@ const About = () => {
         }}
       ></div>
       {/* Sections */}
-      <div className="mt-20">
+      <div className="mt-20 ">
         <AboutSection />
       </div>
       <div className="mt-32">

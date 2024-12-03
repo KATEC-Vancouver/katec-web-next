@@ -77,7 +77,7 @@ const ActivityPage: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center gap-8 px-4 py-10 md:px-20 bg-gray-50 pt-[100px] min-h-screen">
+    <div className="flex flex-col items-center justify-center gap-8 px-4 py-10 md:px-20 bg-[#f7f6fb] pt-[100px] min-h-screen">
       {/* content & text */}
       <div className="w-full max-w-6xl text-center">
         <h2 className="text-3xl font-bold text-gray-800">ACTIVITY</h2>

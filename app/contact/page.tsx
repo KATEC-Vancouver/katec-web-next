@@ -47,14 +47,14 @@ const ContactPage: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-between min-h-screen bg-gray-50 px-4 py-10 md:px-20 pt-[100px]">
+    <div className="flex flex-col items-center justify-between min-h-screen bg-[#f7f6fb] px-4 py-10 md:px-20 pt-[100px]">
       {/* Header Text */}
       <div className="w-full max-w-6xl text-center mb-10">
         <h2 className="text-3xl font-bold text-gray-800">CONTACT</h2>
       </div>
 
       {/* Address, Phone, Email Section */}
-      <div className="w-full max-w-3xl bg-gray-50 p-8 rounded mb-0">
+      <div className="w-full max-w-3xl bg-[#f7f6fb] p-8 rounded mb-0">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
           {/* Address Section */}
           <div className="flex flex-col items-center">
