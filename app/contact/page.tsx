@@ -4,12 +4,13 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import { Inter } from 'next/font/google';
 
-import Layout from '@/components/FAQ/Layout'    
-import data from "@/public/data.json"; 
-const inter = Inter({ subsets: ['latin'] })
+
+import Layout from '@/components/FAQ/Layout';
+import data from '@/public/data.json';
+const inter = Inter({ subsets: ['latin'] });
 
 const ContactPage: React.FC = () => {
-
+  
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -19,6 +20,7 @@ const ContactPage: React.FC = () => {
   const [isSending, setIsSending] = useState(false);
   const [isSuccess, setIsSuccess] = useState<null | boolean>(null);
 
+  
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -52,14 +54,14 @@ const ContactPage: React.FC = () => {
     }
   };
 
-
-  const [active, setActive] = useState<boolean[]>(data.map(() => false));  
+  // QnA 상태 및 핸들러
+  const [active, setActive] = useState<boolean[]>(data.map(() => false));
   const isSomeActive = active.some((element) => element);
   const handleClick = () => {
     if (isSomeActive) {
-      setActive(data.map(() => false));
+      setActive(data.map(() => false)); // 전부 false로 (닫기)
     } else {
-      setActive(data.map(() => true));  
+      setActive(data.map(() => true)); // 전부 true로 (열기)
     }
   };
 
@@ -71,100 +73,109 @@ const ContactPage: React.FC = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
-      <div className="flex flex-col items-center justify-between min-h-screen bg-[#f7f6fb] px-4 py-10 md:px-20 pt-[100px]">
+      <div className="flex flex-col items-center justify-between min-h-screen bg-[#f7f6fb] px-4 py-10 md:px-10 pt-[100px]">
         {/* Contact Title */}
-        <div className="w-full max-w-6xl text-center mb-10">
+        <div className="w-full max-w-7xl text-center mb-10">
           <h2 className="text-3xl font-bold text-gray-800">CONTACT</h2>
         </div>
 
-        {/* Address, Phone, Email */}
-        <div className="w-full max-w-3xl bg-[#f7f6fb] p-8 rounded mb-0">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-            <div className="flex flex-col items-center">
-              <div className="text-gray-500 text-2xl mb-2">📍</div>
-              <h3 className="text-lg font-semibold text-gray-800">ADDRESS</h3>
-              <p className="text-gray-600">Vancouver, CA</p>
-            </div>
-            <div className="flex flex-col items-center">
-              <div className="text-gray-500 text-2xl mb-2">📞</div>
-              <h3 className="text-lg font-semibold text-gray-800">PHONE NUMBER</h3>
-              <p className="text-gray-600">+1 123 456 7890</p>
-            </div>
-            <div className="flex flex-col items-center">
-              <div className="text-gray-500 text-2xl mb-2">✉️</div>
-              <h3 className="text-lg font-semibold text-gray-800">EMAIL</h3>
-              <p className="text-gray-600">info@katec.com</p>
-            </div>
+        {/* FAQ & Contact Form Section */}
+        <div className="w-full max-w-7xl flex flex-col lg:flex-row gap-6 items-start">
+          {/* FAQ Section */}
+          <div className="flex-[1.6] bg-white p-6 rounded shadow-md w-full">
+            <Layout
+              handleClick={handleClick}
+              isSomeActive={isSomeActive}
+              data={data}
+              turn={active}
+              setTurn={setActive}
+            />
           </div>
-        </div>
 
-        {/* Contact Form */}
-        <div className="w-full max-w-3xl bg-white p-8 rounded shadow-md mt-0">
-          <form onSubmit={handleSubmit}>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-4">
+          {/* Contact Form */}
+          <div className="flex-[1] bg-white p-8 rounded shadow-md h-[707px]">
+            {/* Address, Phone, Email */}
+            <div className="grid grid-cols-3 gap-6 mb-6 mt-11 text-center">
+              <div className="flex flex-col items-center">
+                <div className="text-gray-500 text-2xl mb-2">📍</div>
+                <h3 className="text-lg font-semibold text-gray-800">ADDRESS</h3>
+                <p className="text-gray-600">Vancouver, CA</p>
+              </div>
+              <div className="flex flex-col items-center">
+                <div className="text-gray-500 text-2xl mb-2">📞</div>
+                <h3 className="text-lg font-semibold text-gray-800">NUMBER</h3>
+                <p className="text-gray-600">+1 123 456 7890</p>
+              </div>
+              <div className="flex flex-col items-center">
+                <div className="text-gray-500 text-2xl mb-2">✉️</div>
+                <h3 className="text-lg font-semibold text-gray-800">EMAIL</h3>
+                <p className="text-gray-600">info@katec.com</p>
+              </div>
+            </div>
+
+            {/* Middle text */}
+            <div className="mb-6 text-center">
+              <p className="text-gray-700">
+                이곳은 협찬 또는 KATEC에 대한 어떠한것에 의문이 생기면 물어볼 수 있는 메일을 보낼 수 있는 공간입니다.
+              </p>
+            </div>
+
+            {/* Contact Form */}
+            <form onSubmit={handleSubmit}>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-4">
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Your Name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  className="p-4 border border-gray-300 rounded w-full focus:outline-none focus:ring focus:ring-gray-200"
+                  required
+                />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Your Email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  className="p-4 border border-gray-300 rounded w-full focus:outline-none focus:ring focus:ring-gray-200"
+                  required
+                />
+              </div>
               <input
                 type="text"
-                name="name"
-                placeholder="Your Name"
-                value={formData.name}
+                name="subject"
+                placeholder="Subject"
+                value={formData.subject}
                 onChange={handleChange}
-                className="p-4 border border-gray-300 rounded w-full focus:outline-none focus:ring focus:ring-gray-200"
+                className="p-4 border border-gray-300 rounded w-full mb-4 focus:outline-none focus:ring focus:ring-gray-200"
                 required
               />
-              <input
-                type="email"
-                name="email"
-                placeholder="Your Email"
-                value={formData.email}
+              <textarea
+                name="message"
+                placeholder="Message"
+                rows={5}
+                value={formData.message}
                 onChange={handleChange}
-                className="p-4 border border-gray-300 rounded w-full focus:outline-none focus:ring focus:ring-gray-200"
+                className="p-4 border border-gray-300 rounded w-full mb-6 focus:outline-none focus:ring focus:ring-gray-200"
                 required
-              />
-            </div>
-            <input
-              type="text"
-              name="subject"
-              placeholder="Subject"
-              value={formData.subject}
-              onChange={handleChange}
-              className="p-4 border border-gray-300 rounded w-full mb-4 focus:outline-none focus:ring focus:ring-gray-200"
-              required
-            />
-            <textarea
-              name="message"
-              placeholder="Message"
-              rows={5}
-              value={formData.message}
-              onChange={handleChange}
-              className="p-4 border border-gray-300 rounded w-full mb-6 focus:outline-none focus:ring focus:ring-gray-200"
-              required
-            ></textarea>
-            <button
-              type="submit"
-              className={`w-full py-3 ${isSending ? 'bg-gray-400' : 'bg-black'} text-white font-semibold rounded hover:bg-gray-800 transition`}
-              disabled={isSending}
-            >
-              {isSending ? 'Sending...' : 'Send Message'}
-            </button>
-          </form>
-          {isSuccess === true && (
-            <p className="text-green-500 mt-4">Email sent successfully!</p>
-          )}
-          {isSuccess === false && (
-            <p className="text-red-500 mt-4">Failed to send email. Please try again later.</p>
-          )}
+              ></textarea>
+              <button
+                type="submit"
+                className={`w-full py-3 ${isSending ? 'bg-gray-400' : 'bg-black'} text-white font-semibold rounded mt-4 hover:bg-gray-800 transition`}
+                disabled={isSending}
+              >
+                {isSending ? 'Sending...' : 'Send Message'}
+              </button>
+            </form>
+            {isSuccess === true && (
+              <p className="text-green-500 mt-4">Email sent successfully!</p>
+            )}
+            {isSuccess === false && (
+              <p className="text-red-500 mt-4">Failed to send email. Please try again later.</p>
+            )}
+          </div>
         </div>
-
-        {/* 여기에 QnA Section 추가 */}
-        <div className="mt-10 w-full flex justify-center">
-  <Layout
-    handleClick={handleClick}
-    isSomeActive={isSomeActive}
-    data={data}
-    turn={active}
-    setTurn={setActive}
-  />
-</div>
       </div>
     </>
   );
