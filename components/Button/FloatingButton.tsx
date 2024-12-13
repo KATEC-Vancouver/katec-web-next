@@ -13,7 +13,7 @@ const FloatingButton: React.FC = () => {
       {/* Main Circular Button */}
       <button
         onClick={toggleMenu}
-        className="bg-blue-300 text-white p-4 w-16 h-16 rounded-full shadow-lg flex items-center justify-center hover:bg-blue-400 focus:outline-none transition animate-bounce"
+        className="bg-blue-300 text-white p-4 w-16 h-16 rounded-full shadow-lg flex items-center justify-center hover:bg-blue-400 focus:outline-none transition animate-bounce-slow"
       >
         클릭
       </button>

@@ -10,18 +10,22 @@ interface CardProps {
 
 const CardDefault: FC<CardProps> = ({ title, desc, img, date }) => {
   return (
-    <div className="w-full bg-white  shadow-md overflow-hidden">
-      <Image
-        src={img}
-        alt={title}
-        width={870}
-        height={500}
-        className="w-full h-48 object-cover"
-      />
-      <div className="p-6">
+    <div className="w-full bg-white shadow-md overflow-hidden flex flex-col h-[300px]"> 
+      
+      <div className="h-[60%] w-full flex-shrink-0">
+        <Image
+          src={img}
+          alt={title}
+          width={870}
+          height={500}
+          className="w-full h-full object-cover"
+        />
+      </div>
+      
+      <div className="h-[40%] p-4 flex flex-col justify-between">
         <span className="block text-orange-500 text-sm mb-2">{date}</span>
-        <h3 className="text-lg text-gray-800 font-semibold mb-2z">{title}</h3>
-        <p className="text-gray-400 text-sm">{desc}</p>
+        <h3 className="text-lg text-gray-800 font-semibold">{title}</h3>
+        <p className="text-gray-400 text-sm line-clamp-3">{desc}</p> 
       </div>
     </div>
   );
