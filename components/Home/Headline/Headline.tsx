@@ -34,7 +34,7 @@ const Headline = () => {
               >
                 <Image
                   src="/images/naverlogo.png"
-                  alt="Instagram"
+                  alt="NAVER"
                   width={32}
                   height={32}
                   className="rounded-full"
@@ -49,7 +49,7 @@ const Headline = () => {
               >
                 <Image
                   src="/images/kakaologo.png"
-                  alt="Instagram"
+                  alt="KAkao"
                   width={32}
                   height={32}
                   className="rounded-full"
