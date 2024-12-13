@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  font-family: 'Poppins'!important;
+  font-family: 'Poppins', sans-serif !important;
 }
 
 @layer utilities {
@@ -13,7 +13,16 @@ body {
            after:h-[3px] after:bg-blue-300 after:w-full 
            after:scale-x-0 after:hover:scale-x-100 
            after:transition after:duration-300 
-           after:origin-center; 
+           after:origin-center;
   }
 }
 
+/* Custom Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  display: none; /* 스크롤 바 숨김 */
+}
+
+.custom-scrollbar {
+  -ms-overflow-style: none; /* IE에서 스크롤 바 숨김 */
+  scrollbar-width: none; /* Firefox에서 스크롤 바 숨김 */
+}
