@@ -22,7 +22,7 @@ const ActivityHighlights: React.FC = () => {
   };
 
   return (
-    <div className="w-[90%] sm:w-[80%] mx-auto mb-12 bg-white shadow-md rounded-lg p-8">
+    <div className="w-[90%] sm:w-[80%] mx-auto mb-12 bg-gray-50 shadow-md rounded-lg p-8">
       <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">ACTIVITY</h2>
       {/* scroll */}
       <div className="overflow-x-auto">
