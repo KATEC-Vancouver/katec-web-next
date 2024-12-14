@@ -12,11 +12,18 @@ const FloatingButton: React.FC = () => {
     <div className="fixed bottom-4 right-4 z-50">
       {/* Main Circular Button */}
       <button
-        onClick={toggleMenu}
-        className="bg-blue-300 text-white p-4 w-16 h-16 rounded-full shadow-lg flex items-center justify-center hover:bg-blue-400 focus:outline-none transition animate-bounce-slow"
-      >
-        클릭
-      </button>
+  onClick={toggleMenu}
+  className="w-16 h-16 rounded-full shadow-lg flex items-center justify-center hover:scale-110 transition animate-bounce-slow"
+  style={{ overflow: "hidden" }} // 둥근 이미지를 보장하기 위해 추가
+>
+  <Image
+    src="/images/floatingbutton.png" // 이미지 경로
+    alt="Button"
+    width={154} // 버튼 크기에 맞춘 가로 크기
+    height={154} // 버튼 크기에 맞춘 세로 크기
+    className="object-cover"
+  />
+</button>
 
       {/* Floating Menu */}
       {isMenuOpen && (
@@ -56,7 +63,7 @@ const FloatingButton: React.FC = () => {
             className="flex items-center justify-center w-12 h-12 rounded-full bg-gray-200 hover:bg-gray-300"
           >
             <Image
-              src="/images/kakaologo.png"
+              src="/images/kakaoTlogo.png"
               alt="Kakao"
               width={32}
               height={32}
