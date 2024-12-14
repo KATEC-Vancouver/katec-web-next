@@ -1,5 +1,6 @@
 'use client';
 import React, { useState, useRef, useEffect } from 'react';
+import Link from 'next/link'; // Link 가져오기
 import CardDefault from '@/components/Card/ActivityCardDefault';
 import Modal from '@/components/Modal/Modal';
 import { posts } from '@/app/activity/page'; // posts data
@@ -8,7 +9,6 @@ const ActivityHighlights: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const sliderRef = useRef<HTMLDivElement>(null);
-
 
   const [autoSlide, setAutoSlide] = useState(true);
 
@@ -54,8 +54,15 @@ const ActivityHighlights: React.FC = () => {
   }, [autoSlide]);
 
   return (
-    <div className="w-[90%] sm:w-[80%] mx-auto mb-12 bg-gray-50 shadow-md rounded-lg p-8">
-      <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">ACTIVITY</h2>
+    <div className="w-[90%] sm:w-[71%] mx-auto mb-12 bg-[#f7f6fb] rounded-lg p-8">
+      <Link href="/activity" passHref>
+        <h2
+          className="text-2xl font-bold text-center text-gray-800 mb-6 hover:text-blue-600 hover:underline cursor-pointer"
+          title="Go to Activity Page"
+        >
+          ACTIVITY
+        </h2>
+      </Link>
 
       <div className="relative">
         {/* 왼쪽 화살표 */}
