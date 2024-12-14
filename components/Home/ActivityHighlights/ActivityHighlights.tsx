@@ -1,6 +1,6 @@
 'use client';
 import React, { useState, useRef, useEffect } from 'react';
-import CardDefault from '@/components/Card/CardDefault';
+import CardDefault from '@/components/Card/ActivityCardDefault';
 import Modal from '@/components/Modal/Modal';
 import { posts } from '@/app/activity/page'; // posts data
 

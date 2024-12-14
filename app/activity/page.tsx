@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import CardDefault from '@/components/Card/CardDefault';
+import CardDefault from '@/components/Card/ActivityCardDefault';
 import Modal from '@/components/Modal/Modal';
 
 
