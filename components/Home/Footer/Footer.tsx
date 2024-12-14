@@ -88,7 +88,7 @@ const Footer = () => {
               </li>
             </ul>
             {/* 추가 텍스트 */}
-            <p className="text-xs text-gray-400 mt-4 text-right">Developed by Noel.Kim | Austin.Hyun</p>
+            <p className="text-xs text-gray-400 mt-4 text-right">Developed by Noel.Kim Seung-yeop.Hyun </p>
           </div>
 
           {/* Right - Sponsor Section */}

@@ -10,7 +10,8 @@ interface CardProps {
 
 const CardDefault: FC<CardProps> = ({ title, desc, img, date }) => {
   return (
-    <div className="w-full bg-white shadow-md overflow-hidden flex flex-col h-[300px]"> 
+    <div className="w-full bg-white shadow-md overflow-hidden flex flex-col h-[300px] transition-transform hover:scale-105"> 
+     
       
       <div className="h-[60%] w-full flex-shrink-0">
         <Image

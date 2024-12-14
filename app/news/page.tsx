@@ -1,8 +1,9 @@
 'use client';
 
 import React, { useState } from 'react';
+import NewsCardDefault from '@/components/Card/NewsCardDefault'; // 재사용 가능한 뉴스 카드 컴포넌트
 
-const news = [
+export const news = [
   {
     title: "2024 박기범님 세미나 진행",
     date: "Oct 5, 2024",
@@ -35,6 +36,7 @@ const news = [
   },
 ];
 
+
 const NewsPage: React.FC = () => {
   const [selectedNews, setSelectedNews] = useState<null | typeof news[0]>(null);
 
@@ -42,35 +44,35 @@ const NewsPage: React.FC = () => {
 
   return (
     <div className="flex flex-col items-center justify-center gap-8 px-4 py-10 md:px-20 bg-[#f7f6fb] pt-[100px] min-h-screen">
-      {/* content & text */}
+      {/* Header */}
       <div className="w-full max-w-6xl text-center">
         <h2 className="text-3xl font-bold text-gray-800 mb-6">NEWS</h2>
       </div>
 
-      {/* card list */}
+      {/* 카드 리스트 */}
       <div className="w-full max-w-6xl">
         <div className="grid gap-6 mt-8 sm:grid-cols-1 lg:grid-cols-1 w-full">
           {news.map((item, index) => (
             <div
               key={index}
-              className="relative bg-[#f7f6fb] p-6 border border-transparent hover:border-gray-300 hover:shadow-xl transition w-full cursor-pointer"
-              onClick={() => setSelectedNews(item)}
+              onClick={() => setSelectedNews(item)} // 클릭 시 모달 열기
+              className="cursor-pointer"
             >
-              <h3 className="text-xl font-bold text-gray-800">{item.title}</h3>
-              <p className="mt-2 text-gray-600">{item.desc}</p>
-              <div className="mt-4 text-sm text-gray-500">
-                <p>{item.date}</p>
-                <p>By {item.author}</p>
-              </div>
+              <NewsCardDefault
+                title={item.title}
+                desc={item.desc}
+                date={item.date}
+                author={item.author}
+              />
             </div>
           ))}
         </div>
       </div>
 
-      {/* Modal */}
+      {/* 모달 */}
       {selectedNews && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-          <div className="bg-white rounded-lg shadow-lg p-6 w-full max-w-lg relative">
+          <div className="bg-blue-gray-500 rounded-lg shadow-lg p-6 w-full max-w-lg relative">
             <button
               onClick={closeModal}
               className="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
