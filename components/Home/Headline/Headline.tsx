@@ -4,6 +4,7 @@ import Image from 'next/image'
 const Headline = () => {
   return (
     <div className='w-full pt-[4vh] md:pt-[12vh] h-screen bg-[#f7f6fb]'>
+      
       <div className='flex justify-center flex-col w-[90%] sm:w-[80%] h-full mx-auto'>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
           {/* Left */}
@@ -48,7 +49,7 @@ const Headline = () => {
                 className="flex items-center"
               >
                 <Image
-                  src="/images/kakaologo.png"
+                  src="/images/kakaoTlogo.png"
                   alt="KAkao"
                   width={32}
                   height={32}

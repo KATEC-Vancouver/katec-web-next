@@ -59,7 +59,7 @@ const Footer = () => {
               rel="noopener noreferrer"
             >
               <Image
-                src="/images/kakaologo.png"
+                src="/images/kakaoTlogo.png"
                 alt="Kakao"
                 width={32}
                 height={32}
