@@ -152,26 +152,29 @@ const About = () => {
   }, []);
 
   return (
-    <MainLayout>
-      <div
-        className="absolute top-0 left-0 w-full bg-gradient-to-b from-transparent to-blue-50 rounded-b-[50px] -z-10"
-        style={{
-          height: '10vh',
-          top: bgPosition,
-        }}
-      ></div>
-      {/* Sections */}
-      <div className="mt-20 ">
-        <AboutSection />
-      </div>
-      <div className="mt-32">
-        <MissionSection />
-      </div>
-      <div className="mt-40">
-        <HistorySection />
-      </div>
-    </MainLayout>
+    <div className="w-full bg-[#f7f6fb] min-h-screen flex flex-col items-center"> {/* 전체 배경색과 중앙 정렬 */}
+      <MainLayout>
+          <div
+          className="absolute top-0 left-0 w-full bg-gradient-to-b from-transparent to-pink-50 rounded-b-[50px] z-0"
+          style={{
+            height: '10vh',
+            top: bgPosition,
+          }}
+        ></div>
+        {/* Sections */}
+        <div className="mt-20 ">
+          <AboutSection />
+        </div>
+        <div className="mt-32">
+          <MissionSection />
+        </div>
+        <div className="mt-40">
+          <HistorySection />
+        </div>
+      </MainLayout>
+    </div>
   );
 };
+
 
 export default About;
