@@ -115,7 +115,7 @@ const HistorySection = () => {
               transform: 'translate(-50%, -50%)',
               width: '1.5vw',
               height: '1.5vw',
-              backgroundColor: index === historyData.length - 1 ? '#3B82F6' : '#D1D5DB',
+              backgroundColor: index === historyData.length - 1 ? '#FBCFE8' : '#D1D5DB',
             }}
           ></div>
         </div>
@@ -152,7 +152,7 @@ const About = () => {
   }, []);
 
   return (
-    <div className="w-full bg-[#f7f6fb] min-h-screen flex flex-col items-center"> {/* 전체 배경색과 중앙 정렬 */}
+    <div className="w-full bg-[#f7f6fb] min-h-screen flex flex-col items-center">
       <MainLayout>
           <div
           className="absolute top-0 left-0 w-full bg-gradient-to-b from-transparent to-pink-50 rounded-b-[50px] z-0"
