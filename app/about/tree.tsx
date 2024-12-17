@@ -4,14 +4,22 @@ import Aos from 'aos';
 import 'aos/dist/aos.css';
 
 const AboutSection = () => (
-  <div
-    className="w-full max-w-4xl text-center bg-white shadow-lg p-8 rounded-lg border border-gray-200"
-    style={{ marginTop: '5vh' }} // 상단 여백을 10px로 줄임
-  >
-    <h2 className="text-3xl font-bold text-gray-800">About KATEC</h2>
-    <p className="mt-4 text-gray-600">
-      KATEC은 밴쿠버 지역 한인 IT 개발자들이 소통하고 협력하는 커뮤니티입니다. 💻✨
-    </p>
+  <div id="about-section" className="w-full text-center px-4 lg:px-0 mt-16">
+    <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800 mb-12">with KATEC,</h2>
+    <div className="w-full max-w-5xl mx-auto bg-white shadow-lg rounded-lg p-6" style={{ minWidth: '60vw' }}>
+      <div className="grid grid-cols-3 gap-4 md:gap-16 justify-items-center">
+        {[
+          { number: '400+', description: '회원수' },
+          { number: '70만 명', description: '방문수' },
+          { number: '700만 건', description: '월 페이지 뷰' },
+        ].map((item, index) => (
+          <div key={index} className="flex flex-col items-center">
+            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-700">{item.number}</h3>
+            <p className="text-xs sm:text-sm md:text-base text-gray-600 mt-2">{item.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
   </div>
 );
 
@@ -107,7 +115,7 @@ const HistorySection = () => {
               transform: 'translate(-50%, -50%)',
               width: '1.5vw',
               height: '1.5vw',
-              backgroundColor: index === historyData.length - 1 ? '#3B82F6' : '#D1D5DB',
+              backgroundColor: index === historyData.length - 1 ? '#FBCFE8' : '#D1D5DB',
             }}
           ></div>
         </div>
