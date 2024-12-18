@@ -115,7 +115,7 @@ const HistorySection = () => {
               transform: 'translate(-50%, -50%)',
               width: '1.5vw',
               height: '1.5vw',
-              backgroundColor: index === historyData.length - 1 ? '#FBCFE8' : '#D1D5DB',
+              backgroundColor: index === historyData.length - 1 ? '#3B82F6' : '#D1D5DB',
             }}
           ></div>
         </div>
