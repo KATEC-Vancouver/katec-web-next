@@ -17,7 +17,7 @@ const FloatingButton: React.FC = () => {
   style={{ overflow: "hidden" }} // 둥근 이미지를 보장하기 위해 추가
 >
   <Image
-    src="/images/floatingbutton.png" // 이미지 경로
+    src="/images/main/floatingbutton.png" // 이미지 경로
     alt="Button"
     width={154} // 버튼 크기에 맞춘 가로 크기
     height={154} // 버튼 크기에 맞춘 세로 크기

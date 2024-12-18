@@ -41,7 +41,7 @@ const Nav = ({ openNav }: Props) => {
         <div className="flex items-center">
           <Link href="/"> 
             <img
-              src="/images/nonBg-logo.png"
+              src="/images/logo/nonBg-logo.png"
               alt="Logo"
               className="h-10 md:h-12 cursor-pointer" 
             />

@@ -13,7 +13,7 @@ const Footer = () => {
           <div className="flex flex-col items-center lg:items-start gap-2 lg:mr-4">
             <Link href="/">
               <Image
-                src="/images/nonBg-logo.png"
+                src="/images/logo/nonBg-logo.png"
                 alt="Logo"
                 width={120}
                 height={50}
@@ -33,7 +33,7 @@ const Footer = () => {
               rel="noopener noreferrer"
             >
               <Image
-                src="/images/lnkdlogo.png"
+                src="/images/logo/lnkdlogo.png"
                 alt="Linkedin"
                 width={32}
                 height={32}
@@ -46,7 +46,7 @@ const Footer = () => {
               rel="noopener noreferrer"
             >
               <Image
-                src="/images/naverlogo.png"
+                src="/images/logo/naverlogo.png"
                 alt="Naver"
                 width={32}
                 height={32}
@@ -59,7 +59,7 @@ const Footer = () => {
               rel="noopener noreferrer"
             >
               <Image
-                src="/images/kakaoTlogo.png"
+                src="/images/logo/kakaoTlogo.png"
                 alt="Kakao"
                 width={32}
                 height={32}
@@ -97,7 +97,7 @@ const Footer = () => {
             <div className="flex items-center justify-end gap-2">
               <Link href="https://www.drawdream.ca/" target="_blank" rel="noopener noreferrer">
                 <Image
-                  src="/images/logo2.png"
+                  src="/images/logo/logo2.png"
                   alt="Sponsor 1"
                   width={110}
                   height={20}

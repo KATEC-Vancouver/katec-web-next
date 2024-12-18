@@ -30,7 +30,7 @@ const NewsHighlights: React.FC = () => {
           className="text-2xl font-bold text-center text-gray-800 mb-6 hover:text-blue-600 hover:underline cursor-pointer"
           title="Go to News Page"
         >
-          What’s Next in News
+          UPCOMING NEWS
         </h2>
       </Link>
       <div

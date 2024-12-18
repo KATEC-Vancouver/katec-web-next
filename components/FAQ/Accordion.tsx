@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import React, { Dispatch, SetStateAction, useEffect, useRef } from 'react'
-import minus from "@/./public/minus.svg";
-import plus from "@/./public/plus.svg";
+import minus from "@/./public/images/contact/minus.svg";
+import plus from "@/./public/images/contact/plus.svg";
 
 type Props = {
     question: string,

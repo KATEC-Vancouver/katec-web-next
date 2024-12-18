@@ -9,35 +9,35 @@ export const news = [
     date: "Oct 5, 2024",
     desc: "밴쿠버 IT 커뮤니티에서 성공적으로 개최된 KATEC 세미나.",
     author: "KATEC",
-    img: "/images/image5.jpeg", // 이미지 경로 추가
+    img: "/images/news/1.jpeg", // 이미지 경로 추가
   },
   {
     title: "KATEC 공식 웹사이트 개설",
     date: "Dec 1, 2023",
     desc: "2024년 주요 기술 트렌드를 발표하며 새로운 방향성을 제시합니다.",
     author: "KATEC",
-    img: "/images/noimage.png", // 이미지 경로 추가
+    img: "/images/news/noimage.png", // 이미지 경로 추가
   },
   {
     title: "신규 멤버십 프로그램 출시",
     date: "Jan 10, 2024",
     desc: "최신 기술 트렌드를 논의하는 세미나가 성공적으로 개최되었습니다.",
     author: "Event Organizer",
-    img: "/images/noimage.png", // 이미지 경로 추가
+    img: "/images/news/noimage.png", // 이미지 경로 추가
   },
   {
     title: "커뮤니티 네트워크 강화",
     date: "Nov 15, 2023",
     desc: "밴쿠버 IT 커뮤니티의 네트워크를 더욱 강화하고 있습니다.",
     author: "Community",
-    img: "/images/noimage.png", // 이미지 경로 추가
+    img: "/images/news/noimage.png", // 이미지 경로 추가
   },
   {
     title: "2024 기술 트렌드 발표",
     date: "Sep 20, 2023",
     desc: "KATEC 공식 웹사이트가 개설되어 더 많은 정보를 제공합니다.",
     author: "Admin",
-    img: "/images/noimage.png", // 이미지 경로 추가
+    img: "/images/news/noimage.png", // 이미지 경로 추가
   },
 ];
 

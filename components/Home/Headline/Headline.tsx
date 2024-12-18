@@ -19,7 +19,7 @@ const Headline = () => {
                 className="flex items-center"
               >
                 <Image
-                  src="/images/lnkdlogo.png"
+                  src="/images/logo/lnkdlogo.png"
                   alt="LinkedIn"
                   width={32}
                   height={32}
@@ -34,7 +34,7 @@ const Headline = () => {
                 className="flex items-center"
               >
                 <Image
-                  src="/images/naverlogo.png"
+                  src="/images/logo/naverlogo.png"
                   alt="NAVER"
                   width={32}
                   height={32}
@@ -49,7 +49,7 @@ const Headline = () => {
                 className="flex items-center"
               >
                 <Image
-                  src="/images/kakaoTlogo.png"
+                  src="/images/logo/kakaoTlogo.png"
                   alt="KAkao"
                   width={32}
                   height={32}
@@ -76,7 +76,7 @@ const Headline = () => {
           
           {/* Right */}
           <div data-aos="fade-up" data-aos-delay='200' className="hidden lg:block">
-            <Image src="/images/image2.jpeg" width={800} height={700} alt="hero" />
+            <Image src="/images/main/image2.jpeg" width={800} height={700} alt="hero" />
           </div>
         </div>
       </div>

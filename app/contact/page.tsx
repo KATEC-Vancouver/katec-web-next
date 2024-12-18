@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import { Inter } from 'next/font/google';
 
-
+import down from '@/public/images/contact/down.svg';
 import Layout from '@/components/FAQ/Layout';
 import data from '@/public/data.json';
 const inter = Inter({ subsets: ['latin'] });

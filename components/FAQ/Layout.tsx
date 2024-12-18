@@ -27,7 +27,7 @@ const Layout = ({ handleClick, isSomeActive, data, turn, setTurn }: LayoutProps)
       {/* Open All/Close All Button */}
       <div className="flex items-center justify-end w-full mb-6">
         <button
-          className="flex items-center space-x-1 text-sm font-bold lg:text-base lg:space-x-2 py-2 px-4 bg-slate-50"
+          className="flex items-  center space-x-1 text-sm font-bold lg:text-base lg:space-x-2 py-2 px-4 bg-slate-50"
           onClick={handleClick}
         >
           <span className="text-sky-500 min-w-fit text-ellipsis">
@@ -39,7 +39,7 @@ const Layout = ({ handleClick, isSomeActive, data, turn, setTurn }: LayoutProps)
               (isSomeActive ? 'rotate-180' : 'rotate-0')
             }
           >
-            <Image src="/down.svg" alt="down" width={40} height={40} />
+            <Image src="/images/contact/down.svg" alt="down" width={40} height={40} />
           </div>
         </button>
       </div>
